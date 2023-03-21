@@ -1,0 +1,207 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "school",
+    "dateExported": "2023-03-21T07:10:40.957Z",
+    "version": "1.1",
+    "folders": [
+        {
+            "_id": "7122c41c-516a-4cd6-812e-8118dab3bafd",
+            "name": "admin",
+            "containerId": "",
+            "created": "2023-02-19T14:34:14.057Z",
+            "sortNum": 10000
+        },
+        {
+            "_id": "052d009a-3503-456b-9ecd-52722e6635d5",
+            "name": "teacher attendance",
+            "containerId": "",
+            "created": "2023-02-19T14:34:38.714Z",
+            "sortNum": 20000,
+            "settings": {
+                "headers": [
+                    {
+                        "name": "x-auth-token",
+                        "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZjIzOWY1ZjVhNjdiMDA0ZjEwYTEzYSIsImlhdCI6MTY3Njg4NzA5NiwiZXhwIjoxNjc2ODkwNjk2fQ.pD91RG0QQom1iVX0ac9ZGRY9Jv4oHbnU_pZ6KDa0iNs"
+                    }
+                ],
+                "tests": []
+            }
+        }
+    ],
+    "requests": [
+        {
+            "_id": "a2c1a92f-fadf-45ea-810c-877f64688cc9",
+            "colId": "4ed5599a-2ab1-4961-93ef-1bc694fe25eb",
+            "containerId": "052d009a-3503-456b-9ecd-52722e6635d5",
+            "name": "update attendance",
+            "url": "http://localhost:5000/api/teacher/attendance",
+            "method": "PUT",
+            "sortNum": 10000,
+            "created": "2023-02-19T13:42:24.258Z",
+            "modified": "2023-02-20T09:58:47.055Z",
+            "headers": [
+                {
+                    "name": "x-auth-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZjIzOWY1ZjVhNjdiMDA0ZjEwYTEzYSIsImlhdCI6MTY3Njg4NzA5NiwiZXhwIjoxNjc2ODkwNjk2fQ.pD91RG0QQom1iVX0ac9ZGRY9Jv4oHbnU_pZ6KDa0iNs"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"teacherId\":\"63f2992c3a644f9ccff3b77d\",\n  \"date\":\"2023-02-19\",\n  \"status\":\"halfday\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "7171e42c-300d-4d30-b4ae-eb91e0a19065",
+            "colId": "4ed5599a-2ab1-4961-93ef-1bc694fe25eb",
+            "containerId": "7122c41c-516a-4cd6-812e-8118dab3bafd",
+            "name": "create admin",
+            "url": "http://localhost:5000/api/admin/register",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2023-02-19T13:54:42.798Z",
+            "modified": "2023-02-19T15:02:13.544Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"username\":\"vivu1\",\n  \"password\":\"gg@12345\",\n \"role\":\"admin\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "22ad6378-696f-48c1-b36d-18766330fd80",
+            "colId": "4ed5599a-2ab1-4961-93ef-1bc694fe25eb",
+            "containerId": "7122c41c-516a-4cd6-812e-8118dab3bafd",
+            "name": "login admin",
+            "url": "http://localhost:5000/api/admin/login",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2023-02-19T14:22:36.772Z",
+            "modified": "2023-02-19T15:02:44.779Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"username\":\"vivu1\",\n  \"password\":\"gg@12345\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "21f9bbb5-75f0-4402-b221-8d8fb506e309",
+            "colId": "4ed5599a-2ab1-4961-93ef-1bc694fe25eb",
+            "containerId": "052d009a-3503-456b-9ecd-52722e6635d5",
+            "name": "create teacher",
+            "url": "http://localhost:5000/api/teacher/create",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2023-02-19T14:56:18.706Z",
+            "modified": "2023-02-20T09:59:32.241Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\":\"teacher3\",\n  \"email\":\"teacher3@gmail.com\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "5f509492-0bce-45eb-85be-7efe9793428e",
+            "colId": "4ed5599a-2ab1-4961-93ef-1bc694fe25eb",
+            "containerId": "052d009a-3503-456b-9ecd-52722e6635d5",
+            "name": "get all teachers attendance on present day",
+            "url": "http://localhost:5000/api/teacher/attendance?date=2023-02-19",
+            "method": "GET",
+            "sortNum": 50000,
+            "created": "2023-02-19T15:12:01.025Z",
+            "modified": "2023-02-20T08:49:28.152Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "date",
+                    "value": "2023-02-19",
+                    "isPath": false
+                }
+            ],
+            "tests": []
+        },
+        {
+            "_id": "f7fd33ec-85a0-4a50-a4d4-e4e748ee1e9a",
+            "colId": "4ed5599a-2ab1-4961-93ef-1bc694fe25eb",
+            "containerId": "052d009a-3503-456b-9ecd-52722e6635d5",
+            "name": "monthly attendance data for a teacher",
+            "url": "http://localhost:5000/api/teacher/attendance/monthly/?teacherId=63f299243a644f9ccff3b77a&month=2023-02",
+            "method": "GET",
+            "sortNum": 60000,
+            "created": "2023-02-19T15:28:56.860Z",
+            "modified": "2023-02-20T09:36:46.200Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "teacherId",
+                    "value": "63f299243a644f9ccff3b77a",
+                    "isPath": false
+                },
+                {
+                    "name": "month",
+                    "value": "2023-02",
+                    "isPath": false
+                }
+            ],
+            "tests": []
+        },
+        {
+            "_id": "b6e1a04a-f746-48ab-87af-dfb5e9fc6440",
+            "colId": "4ed5599a-2ab1-4961-93ef-1bc694fe25eb",
+            "containerId": "052d009a-3503-456b-9ecd-52722e6635d5",
+            "name": "salary of teachers based on number",
+            "url": "http://localhost:5000/api/teacher/salary?month=2023-02",
+            "method": "GET",
+            "sortNum": 70000,
+            "created": "2023-02-19T15:42:13.382Z",
+            "modified": "2023-02-19T15:44:57.694Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "month",
+                    "value": "2023-02",
+                    "isPath": false
+                }
+            ],
+            "tests": []
+        },
+        {
+            "_id": "389681a7-87de-4b25-b824-12732224063b",
+            "colId": "4ed5599a-2ab1-4961-93ef-1bc694fe25eb",
+            "containerId": "052d009a-3503-456b-9ecd-52722e6635d5",
+            "name": "red flag check",
+            "url": "http://localhost:5000/api/teacher/redflag",
+            "method": "GET",
+            "sortNum": 80000,
+            "created": "2023-02-19T15:50:25.204Z",
+            "modified": "2023-02-20T09:47:22.914Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "a83bd847-2b6e-442b-966c-2abc1c6faf93",
+            "colId": "4ed5599a-2ab1-4961-93ef-1bc694fe25eb",
+            "containerId": "052d009a-3503-456b-9ecd-52722e6635d5",
+            "name": "curr month salary of all teachers",
+            "url": "http://localhost:5000/api/teacher/currmonthsalary",
+            "method": "GET",
+            "sortNum": 90000,
+            "created": "2023-02-20T09:06:10.315Z",
+            "modified": "2023-02-20T09:10:54.211Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}
